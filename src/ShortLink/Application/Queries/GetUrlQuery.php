@@ -33,11 +33,13 @@ class GetUrlQuery
             throw new GetUrlException($e->getMessage(), $e->getCode(), $e);
         }
 
+        if (null === $url) {
+            return null;
+        }
 
         $this->eventDispatcher->dispatch(
             new ShortLinkAccessed($DTO->slug)
         );
-
         return $url;
     }
 }
