@@ -39,7 +39,7 @@ jobs:
                   username: ${{ secrets.SERVER_USER }}
                   key: ${{ secrets.SSH_PRIVATE_KEY }}
                   script: |
-                      /home/deploy/choppedlink-deployment/update.sh "${{ github.sha }}"
+                      /home/deploy/apps/choppedlink-deployment/update.sh "${{ github.sha }}"
 
                       if [ $? -eq 0 ]; then
                         echo "Deploy successful"
