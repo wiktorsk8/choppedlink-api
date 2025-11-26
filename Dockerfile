@@ -79,7 +79,7 @@ ENV APP_ENV=prod
 
 RUN mv "$PHP_INI_DIR/php.ini-production" "$PHP_INI_DIR/php.ini"
 
-RUN touch .env
+RUN cp .env.dev .env
 
 RUN set -eux; \
 	install-php-extensions \
