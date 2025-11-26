@@ -82,6 +82,14 @@ RUN mv "$PHP_INI_DIR/php.ini-production" "$PHP_INI_DIR/php.ini"
 RUN touch .env
 
 ENV DATABASE_URL=sqlite:///:memory:
+ENV APP_SECRET=dev
+ENV DB_CONNECTION=dev
+ENV DB_HOST=dev
+ENV DB_PORT=3306
+ENV DB_NAME=dev
+ENV DB_USER=dev
+ENV DB_PASSWORD=dev
+ENV REDIS_URL=redis
 
 RUN set -eux; \
 	install-php-extensions \
