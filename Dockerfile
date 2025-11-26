@@ -79,6 +79,8 @@ ENV APP_ENV=prod
 
 RUN mv "$PHP_INI_DIR/php.ini-production" "$PHP_INI_DIR/php.ini"
 
+RUN touch .env
+
 RUN set -eux; \
 	install-php-extensions \
         pdo_pgsql \
