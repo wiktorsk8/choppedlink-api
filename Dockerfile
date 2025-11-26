@@ -20,6 +20,7 @@ VOLUME /app/var/
 RUN apt-get update && apt-get install -y --no-install-recommends \
 	file \
 	git \
+    unzip \
 	&& rm -rf /var/lib/apt/lists/*
 
 RUN set -eux; \
@@ -77,6 +78,12 @@ FROM frankenphp_base AS frankenphp_prod
 ENV APP_ENV=prod
 
 RUN mv "$PHP_INI_DIR/php.ini-production" "$PHP_INI_DIR/php.ini"
+
+RUN set -eux; \
+	install-php-extensions \
+        pdo_pgsql \
+	;
+
 
 COPY --link frankenphp/conf.d/20-app.prod.ini $PHP_INI_DIR/app.conf.d/
 
