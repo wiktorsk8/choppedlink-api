@@ -79,7 +79,9 @@ ENV APP_ENV=prod
 
 RUN mv "$PHP_INI_DIR/php.ini-production" "$PHP_INI_DIR/php.ini"
 
-RUN cp .env.dev .env
+RUN touch .env
+
+ENV DATABASE_URL=sqlite:///:memory:
 
 RUN set -eux; \
 	install-php-extensions \
