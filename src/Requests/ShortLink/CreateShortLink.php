@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace App\ShortLink\Infrastructure\Symfony\Request;
+namespace App\Requests\ShortLink;
 
 use Ramsey\Uuid\Uuid;
 use Symfony\Component\HttpFoundation\Request;

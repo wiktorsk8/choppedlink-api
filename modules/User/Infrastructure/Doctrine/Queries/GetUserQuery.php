@@ -1,9 +1,11 @@
 <?php
 
+declare(strict_types=1);
+
 namespace App\User\Infrastructure\Doctrine\Queries;
 
+use App\User\Application\Entities\User;
 use App\User\Application\Queries\GetUser\DTOs\UserDTO;
-use App\User\Infrastructure\Doctrine\Entities\User;
 use Doctrine\ORM\EntityManagerInterface;
 
 class GetUserQuery implements \App\User\Application\Queries\GetUser\GetUserQuery

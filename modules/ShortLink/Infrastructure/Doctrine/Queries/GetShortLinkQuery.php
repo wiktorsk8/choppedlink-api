@@ -4,9 +4,9 @@ declare(strict_types=1);
 
 namespace App\ShortLink\Infrastructure\Doctrine\Queries;
 
+use App\ShortLink\Application\Entities\ShortLink;
 use App\ShortLink\Application\Queries\GetShortLink;
 use App\ShortLink\Application\Queries\Result\ShortLinkDTO;
-use App\ShortLink\Infrastructure\Doctrine\Entity\ShortLink;
 use Doctrine\ORM\EntityManagerInterface;
 
 class GetShortLinkQuery implements GetShortLink

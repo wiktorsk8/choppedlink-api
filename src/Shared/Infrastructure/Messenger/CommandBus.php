@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace App\Shared\Infrastructure\Symfony\Messenger;
+namespace App\Shared\Infrastructure\Messenger;
 
 use App\Shared\Application\Command\Command;
 use Symfony\Component\Messenger\Exception\ExceptionInterface;

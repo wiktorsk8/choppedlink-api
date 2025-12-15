@@ -11,7 +11,7 @@ use App\ShortLink\Application\Exceptions\GenerateSlugException;
 use App\ShortLink\Application\Service\LinkShortenerService;
 use App\ShortLink\Infrastructure\Cache\Repositories\ShortLinkCacheRepository;
 use App\ShortLink\Infrastructure\Doctrine\Entity\ShortLink;
-use App\ShortLink\Infrastructure\Doctrine\Repository\ShortLinkRepository;
+use Repository\ShortLinkRepository;
 use Symfony\Component\EventDispatcher\EventDispatcherInterface;
 
 class CreateShortLinkHandler implements CommandHandler

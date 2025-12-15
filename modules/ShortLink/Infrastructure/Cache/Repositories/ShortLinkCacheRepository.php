@@ -1,9 +1,11 @@
 <?php
 
+declare(strict_types=1);
+
 namespace App\ShortLink\Infrastructure\Cache\Repositories;
 
-use App\ShortLink\Infrastructure\Doctrine\Entity\ShortLink;
-use App\ShortLink\Infrastructure\Doctrine\Repository\ShortLinkRepository;
+use App\ShortLink\Application\Entities\ShortLink;
+use App\ShortLink\Application\Repositories\ShortLinkRepository;
 use Psr\Cache\InvalidArgumentException;
 use Psr\Log\LoggerInterface;
 use Symfony\Contracts\Cache\CacheInterface;

@@ -5,8 +5,7 @@ declare(strict_types=1);
 namespace App\ShortLink\Application\Service;
 
 use App\ShortLink\Application\Exceptions\GenerateSlugException;
-use App\ShortLink\Infrastructure\Doctrine\Repository\ShortLinkRepository;
-use Symfony\Component\Cache\Adapter\RedisAdapter;
+use Repository\ShortLinkRepository;
 use Symfony\Contracts\Cache\CacheInterface;
 
 class LinkShortenerService
