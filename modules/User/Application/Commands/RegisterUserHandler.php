@@ -3,13 +3,14 @@
 namespace App\User\Application\Commands;
 
 use App\Shared\Application\Command\CommandHandler;
+use App\User\Application\Entities\User;
 use App\User\Application\Exceptions\EmailAlreadyTakenException;
 use App\User\Application\Repositories\UserRepository;
-use App\User\Infrastructure\Doctrine\Entities\User;
 use InvalidArgumentException;
 use Ramsey\Uuid\Uuid;
 use Symfony\Component\PasswordHasher\Hasher\UserPasswordHasherInterface;
 use Symfony\Component\Uid\Uuid as SymfonyUuid;
+
 class RegisterUserHandler implements CommandHandler
 {
     public function __construct(

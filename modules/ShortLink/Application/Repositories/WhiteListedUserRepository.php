@@ -1,6 +1,6 @@
 <?php
 
-namespace App\ShortLink\Infrastructure\Doctrine\Repository;
+namespace Repository;
 
 class WhiteListedUserRepository
 {

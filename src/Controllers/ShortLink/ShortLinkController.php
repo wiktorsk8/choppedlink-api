@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace App\ShortLink\Infrastructure\Symfony\Controller;
+namespace App\Controllers\ShortLink;
 
 use App\Shared\Infrastructure\Symfony\Messenger\CommandBus;
 use App\ShortLink\Application\Exceptions\GetUrlException;

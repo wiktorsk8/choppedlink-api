@@ -1,9 +1,9 @@
 <?php
 
-namespace App\User\Infrastructure\Doctrine\Entities;
+namespace App\User\Application\Entities;
 
+use App\User\Application\Repositories\UserRepository;
 use Doctrine\ORM\Mapping as ORM;
-use App\User\Infrastructure\Doctrine\Repositories\UserRepository;
 use Symfony\Bridge\Doctrine\Types\UuidType;
 use Symfony\Component\Security\Core\User\PasswordAuthenticatedUserInterface;
 use Symfony\Component\Security\Core\User\UserInterface;

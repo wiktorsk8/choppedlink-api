@@ -2,18 +2,16 @@
 
 declare(strict_types=1);
 
-namespace App\User\Infrastructure\Symfony\Controller;
+namespace App\Controllers\User;
 
 use App\Shared\Infrastructure\Symfony\Messenger\CommandBus;
 use App\User\Application\Exceptions\EmailAlreadyTakenException;
 use App\User\Application\Queries\GetUser\GetUserQuery;
-use App\User\Infrastructure\Doctrine\Entities\User;
 use App\User\Infrastructure\Symfony\DTOs\RegisterUserDTO;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpKernel\Attribute\MapRequestPayload;
 use Symfony\Component\Routing\Annotation\Route;
-use Symfony\Component\Security\Http\Attribute\CurrentUser;
 use Throwable;
 
 class RegisterController extends AbstractController

@@ -1,6 +1,6 @@
 <?php
 
-namespace App\User\Infrastructure\Symfony\DTOs;
+namespace App\Requests\User\DTOs;
 
 use App\Shared\Application\Command\Command;
 use App\Shared\DTO\DTO;

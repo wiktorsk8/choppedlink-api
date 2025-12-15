@@ -5,7 +5,7 @@ declare(strict_types=1);
 namespace App\ShortLink\Application\Listeners;
 
 use App\ShortLink\Application\Events\ShortLinkAccessed;
-use App\ShortLink\Infrastructure\Doctrine\Repository\ShortLinkRepository;
+use App\ShortLink\Application\Repositories\ShortLinkRepository;
 
 class IncrementClickCounterListener
 {
