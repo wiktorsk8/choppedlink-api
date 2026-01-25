@@ -23,14 +23,14 @@ doctrine:
             ShortLink:
                 type: attribute
                 is_bundle: false
-                dir: '%kernel.project_dir%/src/ShortLink/Infrastructure/Doctrine/Entity'
-                prefix: 'App\ShortLink\Infrastructure\Doctrine\Entity'
+                dir: '%kernel.project_dir%/modules/ShortLink/Application/Entities'
+                prefix: 'Module\ShortLink\Application\Entities'
                 alias: ShortLink
             User:
                 type: attribute
                 is_bundle: false
-                dir: '%kernel.project_dir%/src/User/Infrastructure/Doctrine/Entities'
-                prefix: 'App\User\Infrastructure\Doctrine\Entities'
+                dir: '%kernel.project_dir%/modules/User/Application/Entities'
+                prefix: 'Module\User\Application\Entities'
                 alias: User
 #            App:
 #                type: attribute

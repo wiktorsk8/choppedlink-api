@@ -1,9 +1,8 @@
-register:
+controllers:
     resource:
-        path: ../src/User/Infrastructure/Symfony/Controller/
-        namespace: App\User\Infrastructure\Symfony\Controller
+        path: ../src/Controllers/
+        namespace: App\Controllers
     type: attribute
-
 
 api_login:
     path: /api/login_check

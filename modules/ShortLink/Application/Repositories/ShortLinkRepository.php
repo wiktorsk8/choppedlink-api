@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace App\ShortLink\Application\Repositories;
+namespace Module\ShortLink\Application\Repositories;
 
-use App\ShortLink\Application\Entities\ShortLink;
+use Module\ShortLink\Application\Entities\ShortLink;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Doctrine\Persistence\ManagerRegistry;
 

@@ -1,8 +1,8 @@
 <?php
 
-namespace App\User\Application\Commands;
+namespace Module\User\Application\Commands;
 
-use App\Shared\Application\Command\Command;
+use Module\Shared\Application\Command\Command;
 
 readonly class RegisterUserCommand implements Command
 {

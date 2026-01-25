@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace App\User\Infrastructure\Security;
+namespace Module\User\Infrastructure\Security;
 
 use Firebase\JWT\JWT;
 use Symfony\Component\HttpFoundation\JsonResponse;

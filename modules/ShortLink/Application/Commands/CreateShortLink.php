@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace App\ShortLink\Application\Command;
+namespace Module\ShortLink\Application\Commands;
 
-use App\Shared\Application\Command\Command;
+use Module\Shared\Application\Command\Command;
 
 readonly class CreateShortLink implements Command
 {

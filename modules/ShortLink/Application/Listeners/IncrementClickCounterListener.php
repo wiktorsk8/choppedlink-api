@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace App\ShortLink\Application\Listeners;
+namespace Module\ShortLink\Application\Listeners;
 
-use App\ShortLink\Application\Events\ShortLinkAccessed;
-use App\ShortLink\Application\Repositories\ShortLinkRepository;
+use Module\ShortLink\Application\Events\ShortLinkAccessed;
+use Module\ShortLink\Application\Repositories\ShortLinkRepository;
 
 class IncrementClickCounterListener
 {

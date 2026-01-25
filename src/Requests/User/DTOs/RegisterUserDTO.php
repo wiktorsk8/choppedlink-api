@@ -2,9 +2,8 @@
 
 namespace App\Requests\User\DTOs;
 
-use App\Shared\Application\Command\Command;
-use App\Shared\DTO\DTO;
-use App\User\Application\Commands\RegisterUserCommand;
+use Module\Shared\DTO\DTO;
+use Module\User\Application\Commands\RegisterUserCommand;
 use Symfony\Component\Validator\Constraints as Assert;
 use Ramsey\Uuid\Uuid;
 class RegisterUserDTO extends DTO

@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace App\ShortLink\Application\Queries\Result;
+namespace Module\ShortLink\Application\Queries\Result;
 
-use App\Shared\DTO\DTO;
+use Module\Shared\DTO\DTO;
 
 final class ShortLinkDTO extends DTO
 {

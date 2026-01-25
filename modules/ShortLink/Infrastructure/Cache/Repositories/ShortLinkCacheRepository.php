@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace App\ShortLink\Infrastructure\Cache\Repositories;
+namespace Module\ShortLink\Infrastructure\Cache\Repositories;
 
-use App\ShortLink\Application\Entities\ShortLink;
-use App\ShortLink\Application\Repositories\ShortLinkRepository;
+use Module\ShortLink\Application\Entities\ShortLink;
+use Module\ShortLink\Application\Repositories\ShortLinkRepository;
 use Psr\Cache\InvalidArgumentException;
 use Psr\Log\LoggerInterface;
 use Symfony\Contracts\Cache\CacheInterface;

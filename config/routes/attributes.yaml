@@ -1,7 +1,7 @@
 controllers:
     resource:
-        path: ../../src/ShortLink/Infrastructure/Symfony/Controller/
-        namespace: App\ShortLink\Infrastructure\Symfony\Controller
+        path: ../../src/Controllers/
+        namespace: App\Controllers
     type: attribute
 
 kernel:

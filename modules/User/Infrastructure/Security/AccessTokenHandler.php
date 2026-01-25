@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace App\User\Infrastructure\Security;
+namespace Module\User\Infrastructure\Security;
 
 use Exception;
 use Firebase\JWT\ExpiredException;

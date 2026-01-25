@@ -2,14 +2,14 @@
 
 declare(strict_types=1);
 
-namespace App\ShortLink\Infrastructure\Doctrine\Queries;
+namespace Module\ShortLink\Infrastructure\Doctrine\Queries;
 
-use App\ShortLink\Application\Entities\ShortLink;
-use App\ShortLink\Application\Queries\GetShortLink;
-use App\ShortLink\Application\Queries\Result\ShortLinkDTO;
+use Module\ShortLink\Application\Entities\ShortLink;
+use Module\ShortLink\Application\Queries\GetShortLinkQuery as AppGetShortLinkQuery;
+use Module\ShortLink\Application\Queries\Result\ShortLinkDTO;
 use Doctrine\ORM\EntityManagerInterface;
 
-class GetShortLinkQuery implements GetShortLink
+class GetShortLinkQuery implements AppGetShortLinkQuery
 {
     public function __construct(
         protected EntityManagerInterface $entityManager,

@@ -1,6 +1,6 @@
 <?php
 
-namespace App\ShortLink\Application\Exceptions;
+namespace Module\ShortLink\Application\Exceptions;
 
 class AccessUrlException extends \Exception
 {

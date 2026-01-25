@@ -8,15 +8,17 @@ services:
 
     App\:
         resource: '../src/'
+    Module\:
+        resource: '../modules/'
 
-    App\ShortLink\Infrastructure\Listeners\CacheShortLinkListener:
+    Module\ShortLink\Infrastructure\Listeners\CacheShortLinkListener:
         tags:
             - { name: kernel.event_listener, event: App\ShortLink\Application\Events\ShortLinkCreated, method: onShortLinkCreated}
-    App\ShortLink\Application\Listeners\IncrementClickCounterListener:
+    Module\ShortLink\Application\Listeners\IncrementClickCounterListener:
         tags:
             - { name: kernel.event_listener, event: App\ShortLink\Application\Events\ShortLinkAccessed, method: onShortLinkAccessed }
 
     _instanceof:
-        App\Shared\Application\Command\CommandHandler:
+        Module\Shared\Application\Command\CommandHandler:
             tags:
                 - { name: 'messenger.message_handler', bus: command.bus }

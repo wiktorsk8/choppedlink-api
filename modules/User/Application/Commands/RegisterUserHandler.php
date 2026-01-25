@@ -1,11 +1,11 @@
 <?php
 
-namespace App\User\Application\Commands;
+namespace Module\User\Application\Commands;
 
-use App\Shared\Application\Command\CommandHandler;
-use App\User\Application\Entities\User;
-use App\User\Application\Exceptions\EmailAlreadyTakenException;
-use App\User\Application\Repositories\UserRepository;
+use Module\Shared\Application\Command\CommandHandler;
+use Module\User\Application\Entities\User;
+use Module\User\Application\Exceptions\EmailAlreadyTakenException;
+use Module\User\Application\Repositories\UserRepository;
 use InvalidArgumentException;
 use Ramsey\Uuid\Uuid;
 use Symfony\Component\PasswordHasher\Hasher\UserPasswordHasherInterface;

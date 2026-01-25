@@ -4,10 +4,10 @@ declare(strict_types=1);
 
 namespace App\Controllers\User;
 
-use App\Shared\Infrastructure\Symfony\Messenger\CommandBus;
-use App\User\Application\Exceptions\EmailAlreadyTakenException;
-use App\User\Application\Queries\GetUser\GetUserQuery;
-use App\User\Infrastructure\Symfony\DTOs\RegisterUserDTO;
+use App\Requests\User\DTOs\RegisterUserDTO;
+use Module\Shared\Application\Command\CommandBus;
+use Module\User\Application\Exceptions\EmailAlreadyTakenException;
+use Module\User\Application\Queries\GetUser\GetUserQuery;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpKernel\Attribute\MapRequestPayload;
