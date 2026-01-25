@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Shared\DTO;
+namespace Module\Shared\DTO;
 
-use App\Shared\Application\Command\Command;
+use Module\Shared\Application\Command\Command;
 use Exception;
 
 abstract class DTO

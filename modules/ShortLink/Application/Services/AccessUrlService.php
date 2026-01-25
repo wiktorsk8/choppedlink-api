@@ -2,16 +2,16 @@
 
 declare(strict_types=1);
 
-namespace App\ShortLink\Application\Service;
+namespace Module\ShortLink\Application\Services;
 
-use App\ShortLink\Application\Entities\ShortLink;
-use App\ShortLink\Application\Exceptions\CannotAccessUrlException;
-use App\ShortLink\Application\Repositories\ShortLinkRepository;
-use App\ShortLink\Infrastructure\Cache\Repositories\ShortLinkCacheRepository;
+use Module\ShortLink\Application\Entities\ShortLink;
+use Module\ShortLink\Application\Exceptions\CannotAccessUrlException;
+use Module\ShortLink\Application\Repositories\ShortLinkRepository;
+use Module\ShortLink\Infrastructure\Cache\Repositories\ShortLinkCacheRepository;
 use Doctrine\DBAL\LockMode;
 use Doctrine\ORM\EntityManagerInterface;
 use Psr\Cache\InvalidArgumentException;
-use Repository\WhiteListedUserRepository;
+use Module\ShortLink\Application\Repositories\WhiteListedUserRepository;
 
 class AccessUrlService
 {

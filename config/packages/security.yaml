@@ -6,7 +6,7 @@ security:
     providers:
         app_user_provider:
             entity:
-                class: App\User\Infrastructure\Doctrine\Entities\User
+                class: Module\User\Infrastructure\Doctrine\Entities\User
                 property: email
     firewalls:
         login:
@@ -16,7 +16,7 @@ security:
                 check_path: /api/login_check
                 username_path: email
                 password_path: password
-                success_handler: App\User\Infrastructure\Security\LoginSuccessHandler
+                success_handler: Module\User\Infrastructure\Security\LoginSuccessHandler
 
         register:
             pattern: ^/api/register
@@ -27,7 +27,7 @@ security:
             pattern: ^/api
             stateless: true
             access_token:
-                token_handler: App\User\Infrastructure\Security\AccessTokenHandler
+                token_handler: Module\User\Infrastructure\Security\AccessTokenHandler
             provider: app_user_provider
 
 

@@ -2,13 +2,13 @@
 
 declare(strict_types=1);
 
-namespace App\User\Infrastructure\Doctrine\Queries;
+namespace Module\User\Infrastructure\Doctrine\Queries;
 
-use App\User\Application\Entities\User;
-use App\User\Application\Queries\GetUser\DTOs\UserDTO;
+use Module\User\Application\Entities\User;
+use Module\User\Application\Queries\GetUser\DTOs\UserDTO;
 use Doctrine\ORM\EntityManagerInterface;
 
-class GetUserQuery implements \App\User\Application\Queries\GetUser\GetUserQuery
+class GetUserQuery implements \Module\User\Application\Queries\GetUser\GetUserQuery
 {
     public function __construct(
         private EntityManagerInterface $entityManager

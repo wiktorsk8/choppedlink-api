@@ -1,6 +1,6 @@
 <?php
 
-namespace App\User\Application\Exceptions;
+namespace Module\User\Application\Exceptions;
 
 use Symfony\Component\HttpFoundation\Response;
 use Throwable;

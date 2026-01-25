@@ -1,9 +1,9 @@
 <?php
 
-namespace App\ShortLink\Infrastructure\Listeners;
+namespace Module\ShortLink\Infrastructure\Listeners;
 
-use App\ShortLink\Application\Events\ShortLinkCreated;
-use App\ShortLink\Infrastructure\Cache\Repositories\ShortLinkCacheRepository;
+use Module\ShortLink\Application\Events\ShortLinkCreated;
+use Module\ShortLink\Infrastructure\Cache\Repositories\ShortLinkCacheRepository;
 use Psr\Cache\InvalidArgumentException;
 
 

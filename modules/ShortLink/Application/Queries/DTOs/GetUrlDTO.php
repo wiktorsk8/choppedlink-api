@@ -1,8 +1,8 @@
 <?php
 
-namespace App\ShortLink\Application\Queries\DTOs;
+namespace Module\ShortLink\Application\Queries\DTOs;
 
-use App\Shared\DTO\DTO;
+use Module\Shared\DTO\DTO;
 
 class GetUrlDTO extends DTO
 {

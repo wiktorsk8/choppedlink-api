@@ -4,12 +4,12 @@ declare(strict_types=1);
 
 namespace App\Shared\Infrastructure\Messenger;
 
-use App\Shared\Application\Command\Command;
 use Symfony\Component\Messenger\Exception\ExceptionInterface;
 use Symfony\Component\Messenger\MessageBusInterface;
 use Throwable;
-
-class CommandBus implements \App\Shared\Application\Command\CommandBus
+use Module\Shared\Application\Command\CommandBus as SharedCommandBus;
+use Module\Shared\Application\Command\Command;
+class CommandBus implements SharedCommandBus
 {
     public function __construct(
         private MessageBusInterface $bus

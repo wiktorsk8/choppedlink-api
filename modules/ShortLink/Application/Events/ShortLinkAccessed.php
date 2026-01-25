@@ -1,6 +1,6 @@
 <?php
 
-namespace App\ShortLink\Application\Events;
+namespace Module\ShortLink\Application\Events;
 
 use Symfony\Contracts\EventDispatcher\Event;
 

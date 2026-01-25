@@ -2,13 +2,13 @@
 
 declare(strict_types=1);
 
-namespace App\ShortLink\Application\Queries;
+namespace Module\ShortLink\Application\Queries;
 
-use App\ShortLink\Application\Events\ShortLinkAccessed;
-use App\ShortLink\Application\Exceptions\CannotAccessUrlException;
-use App\ShortLink\Application\Exceptions\GetUrlException;
-use App\ShortLink\Application\Queries\DTOs\GetUrlDTO;
-use App\ShortLink\Application\Service\AccessUrlService;
+use Module\ShortLink\Application\Events\ShortLinkAccessed;
+use Module\ShortLink\Application\Exceptions\CannotAccessUrlException;
+use Module\ShortLink\Application\Exceptions\GetUrlException;
+use Module\ShortLink\Application\Queries\DTOs\GetUrlDTO;
+use Module\ShortLink\Application\Services\AccessUrlService;
 use Psr\Cache\InvalidArgumentException;
 use Symfony\Component\EventDispatcher\EventDispatcherInterface;
 

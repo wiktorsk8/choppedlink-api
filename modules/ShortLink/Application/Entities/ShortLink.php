@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace App\ShortLink\Application\Entities;
+namespace Module\ShortLink\Application\Entities;
 
+use Module\ShortLink\Application\Repositories\ShortLinkRepository;
 use Doctrine\DBAL\Types\Types;
 use Doctrine\ORM\Mapping as ORM;
-use Repository\ShortLinkRepository;
 
 #[ORM\Table(name: 'short_links')]
 #[ORM\Entity(repositoryClass: ShortLinkRepository::class)]

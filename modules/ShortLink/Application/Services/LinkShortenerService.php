@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace App\ShortLink\Application\Service;
+namespace Module\ShortLink\Application\Services;
 
-use App\ShortLink\Application\Exceptions\GenerateSlugException;
-use Repository\ShortLinkRepository;
+use Module\ShortLink\Application\Exceptions\GenerateSlugException;
+use Module\ShortLink\Application\Repositories\ShortLinkRepository;
 use Symfony\Contracts\Cache\CacheInterface;
 
 class LinkShortenerService

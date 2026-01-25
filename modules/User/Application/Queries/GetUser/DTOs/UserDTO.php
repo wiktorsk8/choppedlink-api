@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace App\User\Application\Queries\GetUser\DTOs;
+namespace Module\User\Application\Queries\GetUser\DTOs;
 
-use App\Shared\DTO\DTO;
+use Module\Shared\DTO\DTO;
 
 class UserDTO extends DTO
 {

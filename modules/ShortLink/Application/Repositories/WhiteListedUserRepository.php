@@ -1,6 +1,6 @@
 <?php
 
-namespace Repository;
+namespace Module\ShortLink\Application\Repositories;
 
 class WhiteListedUserRepository
 {
