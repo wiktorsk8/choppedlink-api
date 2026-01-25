@@ -1,4 +1,5 @@
 framework:
     cache:
-        default_redis_provider: '%env(REDIS_URL)%'
-        app: cache.adapter.redis
+        # Use in-memory cache adapters so the app works out of the box (no Redis required)
+        app: cache.adapter.array
+        system: cache.adapter.array
