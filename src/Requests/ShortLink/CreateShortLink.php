@@ -25,9 +25,9 @@ final readonly class CreateShortLink
             accessLimit: $data['accessLimit'] ?? null,
         );
     }
-    public function toCommand(): \Module\ShortLink\Application\Commands\CreateShortLink
+    public function toCommand(): \Module\ShortLink\Application\UseCase\Commands\CreateShortLink\CreateShortLink
     {
-        return new \Module\ShortLink\Application\Commands\CreateShortLink(
+        return new \Module\ShortLink\Application\UseCase\Commands\CreateShortLink\CreateShortLink(
             id: Uuid::uuid4()->toString(),
             url: $this->url,
             isWhiteListed: $this->isWhiteListed,
