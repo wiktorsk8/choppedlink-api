@@ -11,12 +11,32 @@ services:
     Module\:
         resource: '../modules/'
 
-    Module\ShortLink\Infrastructure\Listeners\CacheShortLinkListener:
+    # --- Redis (read model) ---
+    Predis\Client:
+        arguments:
+            $parameters: '%env(REDIS_URL)%'
+    Predis\ClientInterface: '@Predis\Client'
+
+    # --- CQRS read side: bind query interfaces to their Redis-backed implementations ---
+    Module\ShortLink\Application\UseCase\Queries\GetUrl\GetUrlQuery:
+        '@Module\ShortLink\Infrastructure\ReadModel\RedisGetUrlQuery'
+    Module\ShortLink\Application\UseCase\Queries\GetShortLink\GetShortLinkQuery:
+        '@Module\ShortLink\Infrastructure\ReadModel\RedisGetShortLinkQuery'
+
+    # --- Read-model write port -> Redis adapter ---
+    Module\ShortLink\Application\ReadModel\ClickCounter:
+        '@Module\ShortLink\Infrastructure\ReadModel\RedisClickCounter'
+
+    # --- Write side: bind the domain repositories to their Doctrine implementations ---
+    Module\ShortLink\Domain\Repositories\ShortLinkRepository:
+        '@Module\ShortLink\Infrastructure\Persistence\Doctrine\Repository\ShortLinkRepository'
+    Module\ShortLink\Domain\Repositories\ShortLinkClickRepository:
+        '@Module\ShortLink\Infrastructure\Persistence\Doctrine\Repository\ShortLinkClickRepository'
+
+    # --- Projection: ShortLinkCreated -> Redis read model ---
+    Module\ShortLink\Infrastructure\ReadModel\ShortLinkProjector:
         tags:
-            - { name: kernel.event_listener, event: App\ShortLink\Application\Events\ShortLinkCreated, method: onShortLinkCreated}
-    Module\ShortLink\Application\Listeners\IncrementClickCounterListener:
-        tags:
-            - { name: kernel.event_listener, event: App\ShortLink\Application\Events\ShortLinkAccessed, method: onShortLinkAccessed }
+            - { name: kernel.event_listener, event: Module\ShortLink\Domain\Events\ShortLinkCreated, method: onShortLinkCreated }
 
     _instanceof:
         Module\Shared\Application\Command\CommandHandler:

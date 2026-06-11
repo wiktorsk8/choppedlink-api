@@ -4,14 +4,12 @@ declare(strict_types=1);
 
 namespace Module\ShortLink\Application\Services;
 
-use Module\ShortLink\Application\Exceptions\GenerateSlugException;
-use Module\ShortLink\Application\Repositories\ShortLinkRepository;
-use Symfony\Contracts\Cache\CacheInterface;
+use Module\ShortLink\Domain\Exceptions\GenerateSlugException;
+use Module\ShortLink\Domain\Repositories\ShortLinkRepository;
 
 class LinkShortenerService
 {
     public function __construct(
-        protected CacheInterface $cache,
         protected ShortLinkRepository $shortLinkRepository,
     ) {
     }
@@ -27,9 +25,7 @@ class LinkShortenerService
             throw new GenerateSlugException($e->getMessage(), $e->getCode(), $e);
         }
 
-        $collision = $this->checkDatabaseCollision($slug);
-
-        if ($collision) {
+        if ($this->checkDatabaseCollision($slug)) {
             return $this->generateSlug($url);
         }
 
